@@ -1,0 +1,25 @@
+<div class="row list-group-item" [ngStyle]="{'background-color': getBackColor()}">
+  <div class="col-sm-12">
+    <div class="row justify-content-between">
+      <h4 class="list-group-item-heading">{{ goal.text }}</h4>
+    </div>
+     <div class="row justify-content-between">
+        <p class="list-group-item-text">{{ goal.expiredDate | date: 'd/M/y'}}</p>
+
+        <div>
+          <button class="btn btn-success" type="button" (click)="doneClick()" [disabled]="getDisabled()">
+            <!-- <span class="glyphicon glyphicon-ok"></span> -->
+            <span class="octicon-chevron-down"></span>
+          </button>
+          <button class="btn btn-danger" type="button" (click)="failClick()" [disabled]="getDisabled()">
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </div>
+     </div>
+   </div>
+   <!-- <span class="float-right">
+     
+      
+   </span> -->
+</div>
+  <br>

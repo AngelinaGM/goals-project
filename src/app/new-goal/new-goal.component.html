@@ -1,0 +1,22 @@
+  <div class="row justify-content-center">  
+   <div class="col-xs-10 col-sm-10 col-md-8"> 
+    <form [formGroup]="newGoalForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-8">
+            <label for="text">Your goal</label>
+            <input type="text" class="form-control" id="text" formControlName="text">
+          </div>
+          <div class="col-md-4">
+            <label for="expDate">Deadline</label>
+            <input type="date" class="form-control" id="expDate" formControlName="expDate">
+          </div>
+        </div>
+        
+      </div>
+      
+      <button class="btn btn-primary" type="submit" [disabled]="!newGoalForm.valid">Add</button>
+    </form> 
+    </div>  
+  </div>  
+ 

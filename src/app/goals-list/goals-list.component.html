@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <div class="col-xs-6 col-sm-8 col-md-8">
+    <!-- <button class="btn btn-success" (click)="fetchData()">Fetch goals</button> -->
+    <!-- <app-goal-item
+    *ngFor="let item of goals; let i = index"
+    [goal]="item"
+    [index]="i"
+    (goalDoneClicked)="onDoneClicked($event)"
+    (goalFailedClicked)="onFailedClicked($event)"></app-goal-item> -->
+    <app-goal-item
+    *ngFor="let item of goals; let i = index"
+    [goal]="item"></app-goal-item>
+  </div>
+</div>
